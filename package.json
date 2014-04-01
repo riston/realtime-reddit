@@ -1,0 +1,13 @@
+{
+  "name": "myapp",
+  "description": "a really cool app",
+  "version": "0.0.1",
+  "engines": {
+    "node": "~0.10"
+  },
+  "dependencies": {
+    "ws": "~0.4.31",
+    "primus": "~2.1.2",
+    "express": "~3.5.1"
+  }
+}
