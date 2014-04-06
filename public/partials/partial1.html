@@ -1,0 +1,48 @@
+<div class="pure-g-r">
+
+    <div class="pure-u-1-1 l-center l-box">
+
+        <form class="pure-form pure-form-aligned">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="url">Webpage URL:</label>
+                    <input id="url" type="url" placeholder="Web page url" class="pure-input-2-3" ng-model="message.url" required />
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="title">Title:</label>
+                    <input id="title" type="text" placeholder="Title or descriptive text" class="pure-input-2-3" ng-model="message.title" />
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="tags">Tags:</label>
+                    <input id="tags" type="text" placeholder="Tags, separate by commas..." class="pure-input-2-3" ng-model="message.tags" />
+                </div>
+
+                <div class="pure-controls">
+
+                    <button type="submit" class="pure-button pure-button-primary pure-input-1-4" ng-click="newMessage()">Send</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</div>
+
+<div class="pure-g-r l-box" ng-repeat="message in messages">
+
+    <div class="pure-u-1-4 blue">
+
+        <p>This is the content</p>
+    </div>
+
+    <div class="pure-u-3-4 green">
+        <a ng-href="#/{{ message.url }}">
+            <h3>{{ message.title }}</h3>
+        </a>
+
+        <p>{{ message.tags }}</p>
+        <p>Created date {{ message.created | date: 'short' }}</p>
+    </div>
+
+</div>
