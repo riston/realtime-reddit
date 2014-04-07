@@ -1,62 +1,11 @@
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body {
-    color: #526066;
-}
-
-h2, h3 {
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-p {
-    line-height: 1.6em;
-}
-
-
-/*
- * -- Layout Styles --
- */
-.l-content {
-    margin: 0 auto;
-}
-
-.l-box {
-    padding: 0.5em 2em;
-}
-
-.l-center {
-    max-width: 980px;
-    margin: 0 auto;
-}
-
-.green {
-    background-color: #0a0;
-}
-
-.blue {
-    background-color: #00a;
-}
-
-/*
- * -- MENU STYLES --
- * Make the menu have a very faint box-shadow.
- */
-.pure-menu {
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-}
-
-/* This is the class used for the footer */
-.footer {
-    background: #111;
-    color: #888;
-    text-align: center;
-}
-    .footer a {
-        color: #ddd;
-    }
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+h2,h3{font-size:2em;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+p{line-height:1.6em}
+.l-content{margin:0 auto}
+.l-box{padding:.5em 2em}
+.l-center{max-width:980px;margin:0 auto}
+.link a:visit{color:#daf}
+.link a:href{color:#daf}
+.pure-menu{box-shadow:0 1px 1px rgba(0,0,0,0.1)}
+.footer{background:#111;color:#888;text-align:center}
+.footer a{color:#ddd}

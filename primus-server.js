@@ -25,7 +25,7 @@ primus.on('connection', function (spark) {
 
             // Broadcasting to all the connected sparks
             primus.forEach( function (socket, id, connections) {
-                
+
                 // Same id found
                 if (spark.id === id) {
                     return;

@@ -9,11 +9,9 @@
 <body>
   <nav id="main-menu" class="pure-menu pure-menu-open pure-menu-horizontal">
      <ul class="menu-list">
-        <li class="pure-menu-selected"><a class="menu-item-link" href="#/view1">Homepage</a></li>
-        <li class="pure-menu-selected"><a class="menu-item-link" href="#/view2">News</a></li>
-        <li class="pure-menu-selected"><a class="menu-item-link" href="#/view3">Graphics</a></li>
-        <li class="pure-menu-selected"><a class="menu-item-link" href="#">Mobile</a></li>
-        <li class="pure-menu-selected"><a class="menu-item-link" href="#">Web Design</a></li>
+        <li class="pure-menu-selected"><a class="menu-item-link" href="#/view1">Home</a></li>
+        <li class="pure-menu-selected"><a class="menu-item-link" href="#/view2">New</a></li>
+          <li class="pure-menu-selected"><a class="menu-item-link" href="#/view2">About</a></li>
      </ul>
   </nav>
 
@@ -35,48 +33,5 @@
   <script src="js/directives.js"></script>
 
   <script src="/primus/primus.js"></script>
-  <script>
-
-    var newsButtonEl = document.querySelector('.news');
-
-    // var primus = new Primus('http://localhost:8080/?query=string');
-    // var primus = new Primus();
-
-    // primus.write('you can write directly, we will queue it');
-    // primus.write('until the open event is called and flush it');
-
-    // primus.on('reconnect', function () {
-    //   console.log('primus: reconnect event happend');
-    // });
-    // primus.on('open', function () {
-    //   console.log('primus: connection established');
-    //   primus.write('hello world');
-    // });
-    // primus.on('error', function (err) {
-    //   console.log('primus: error event', err);
-    // });
-    // primus.on('data', function (data) {
-    //   console.log('primus: received data', data);
-    // });
-    // primus.on('end', function () {
-    //   console.log('primus: connection closed');
-    // });
-
-    // var news = primus.channel('news');
-
-    // news.write('hi news channel');
-    // news.on('data', function (msg) {
-    //     console.log(msg);
-    // });
-
-    // newsButtonEl.addEventListener('click', function (e) {
-    //   primus.write({ type: 'HELLO', msg: 'Hello from button' });
-    // }, true);
-
-    // setInterval(function () {
-    //   primus.write({ ping: 'Pong' });
-    // }, 3000);
-
-  </script>
 </body>
 </html>

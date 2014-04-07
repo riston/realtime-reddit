@@ -31,13 +31,13 @@
 
 <div class="pure-g-r l-box" ng-repeat="message in messages">
 
-    <div class="pure-u-1-4 blue">
+    <div class="pure-u-1-4 image">
 
-        <p>This is the content</p>
+        <img src="images/placeholder.png" />
     </div>
 
-    <div class="pure-u-3-4 green">
-        <a ng-href="#/{{ message.url }}">
+    <div class="pure-u-3-4 l-box">
+        <a ng-href="#/{{ message.url }}" class="link">
             <h3>{{ message.title }}</h3>
         </a>
 
