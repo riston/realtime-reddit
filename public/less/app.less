@@ -1,3 +1,5 @@
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
 
 * {
     -webkit-box-sizing: border-box;
@@ -6,10 +8,10 @@
 }
 
 h2, h3 {
-    font-size: 2em;
+    font-size: 1.3em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 p {
@@ -33,19 +35,40 @@ p {
     margin: 0 auto;
 }
 
-.link a {
+.link {
 
-    &:visit {
+    &:visited {
 
-        color: #daf;
+        color: @nice-blue;
     }
 
-    &:href {
+    &:hover {
 
-        color: #daf;
+        color: @light-blue;
     }
 }
 
+.small {
+
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+
+.tags {
+    list-style: none;
+    padding: 0;
+
+    li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 0.8em;
+    }
+}
+
+.hash {
+    color: #aad;
+}
 /*
  * -- MENU STYLES --
  * Make the menu have a very faint box-shadow.

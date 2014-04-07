@@ -7,7 +7,7 @@ myApp.controller('MyCtrl1', [ '$scope', '$rootScope', 'PrimusService',
         {
             url: 'http://www.neti.ee',
             title: 'Homepage for neti',
-            tags: 'aw,node,sak',
+            tags: [ 'aw', 'node', 'sak' ],
             created: new Date(),
             up_votes: 12,
             down_votes: 42
@@ -15,7 +15,7 @@ myApp.controller('MyCtrl1', [ '$scope', '$rootScope', 'PrimusService',
         {
             url: 'http://www.neti.ee',
             title: 'Homepage for neti',
-            tags: 'aw,node,sak',
+            tags: [ 'aw', 'node', 'sak' ],
             created: new Date(),
             up_votes: 12,
             down_votes: 42
@@ -49,7 +49,7 @@ myApp.controller('MyCtrl1', [ '$scope', '$rootScope', 'PrimusService',
         if (angular.isUndefined(newMessage)) {
             return;
         }
-        
+
         if ($scope.messages.some(findEqualObject(newMessage))) {
             return;
         }
@@ -68,7 +68,7 @@ myApp.controller('MyCtrl1', [ '$scope', '$rootScope', 'PrimusService',
         return function (element) {
 
             // "Simple" object compare, not perfect as the tags might be ordered differently
-            return element && 
+            return element &&
                    equalObject &&
                    ((element.url && equalObject.url && element.url === equalObject.url) ||
                    (element.title && equalObject.title && element.title === equalObject.title) ||

@@ -41,8 +41,13 @@
             <h3>{{ message.title }}</h3>
         </a>
 
-        <p>{{ message.tags }}</p>
-        <p>Created date {{ message.created | date: 'short' }}</p>
+        <p>
+            <ul class="tags">
+                <li ng-repeat="tag in message.tags"><span class="hash">#</span>{{ tag }}</li>
+            </ul>
+        </p>
+
+        <p class="small">Created date {{ message.created | date: 'short' }}</p>
     </div>
 
 </div>

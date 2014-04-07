@@ -1,11 +1,14 @@
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-h2,h3{font-size:2em;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+h2,h3{font-size:1.3em;letter-spacing:.1em;text-transform:uppercase;font-weight:900}
 p{line-height:1.6em}
 .l-content{margin:0 auto}
 .l-box{padding:.5em 2em}
 .l-center{max-width:980px;margin:0 auto}
-.link a:visit{color:#daf}
-.link a:href{color:#daf}
+.link:visited{color:#5b83ad}
+.link:hover{color:#6c94be}
+.small{font-size:.8em;font-style:italic}
+.tags{list-style:none;padding:0}.tags li{display:inline;list-style-type:none;padding-right:.8em}
+.hash{color:#aad}
 .pure-menu{box-shadow:0 1px 1px rgba(0,0,0,0.1)}
 .footer{background:#111;color:#888;text-align:center}
 .footer a{color:#ddd}
