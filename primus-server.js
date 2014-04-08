@@ -4,6 +4,8 @@ var Primus  = require('primus'),
     config  = require('config').server,
     app     = express();
 
+app.set('views', __dirname + '/views');
+app.engine('html', require('ejs').renderFile);
 app.use('/public', express.static(__dirname + '/public'));
 
 // Pass the express instance to http server
@@ -11,6 +13,14 @@ var server = http.createServer(app),
     primus = new Primus(server, {
         transformer: 'websockets'
     });
+
+app.get('/', function (req, res) {
+    res.render('index.html');
+});
+
+app.get('/partials/:partial', function (req, res) {
+    res.render('partials/' + req.params.partial);
+});
 
 primus.on('connection', function (spark) {
 

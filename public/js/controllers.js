@@ -56,10 +56,14 @@ myApp.controller('MyCtrl1', [ '$scope', '$rootScope', 'PrimusService',
 
         // Set the client side date
         newMessage.created = new Date();
+        // Split the tags by comma
+        newMessage.tags = newMessage.tags.split(',');
+
         $scope.messages.unshift(newMessage);
 
         newMessage.type = 'new-message';
 
+        // Send to server
         PrimusService.write(newMessage);
     };
 
@@ -71,8 +75,7 @@ myApp.controller('MyCtrl1', [ '$scope', '$rootScope', 'PrimusService',
             return element &&
                    equalObject &&
                    ((element.url && equalObject.url && element.url === equalObject.url) ||
-                   (element.title && equalObject.title && element.title === equalObject.title) ||
-                   (element.tags && equalObject.tags && element.tags === equalObject.tags));
+                   (element.title && equalObject.title && element.title === equalObject.title));
         };
     }
 
