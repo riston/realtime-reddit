@@ -2,26 +2,32 @@
 
     <div class="pure-u-1-1 l-center l-box">
 
-        <form class="pure-form pure-form-aligned">
+        <form name="postForm" class="pure-form pure-form-aligned" novalidate>
             <fieldset>
                 <div class="pure-control-group">
                     <label for="url">Webpage URL:</label>
-                    <input id="url" type="url" placeholder="Web page url" class="pure-input-2-3" ng-model="message.url" required />
+                    <input id="url" name="url" type="text" placeholder="Web page url" class="pure-input-2-3" ng-model="message.url" required />
+
+                    <p ng-show="postForm.url.$invalid && !postForm.url.$pristine" class="help-block">Make sure you have set URL.</p>
                 </div>
 
                 <div class="pure-control-group">
                     <label for="title">Title:</label>
-                    <input id="title" type="text" placeholder="Title or descriptive text" class="pure-input-2-3" ng-model="message.title" />
+                    <input id="title" name="title" type="text" placeholder="Title or descriptive text" class="pure-input-2-3" ng-model="message.title" ng-minlength="3" required />
+
+                    <p ng-show="postForm.title.$invalid && !postForm.title.$pristine" class="help-block">Make sure you have set title.</p>
                 </div>
 
                 <div class="pure-control-group">
                     <label for="tags">Tags:</label>
-                    <input id="tags" type="text" placeholder="Tags, separate by commas..." class="pure-input-2-3" ng-model="message.tags" />
+                    <input id="tags" name="tags" type="text" placeholder="Tags, separate by commas..." class="pure-input-2-3" ng-model="message.tags" required />
+
+                    <p ng-show="postForm.tags.$invalid && !postForm.tags.$pristine" class="help-block">Make sure you have set tags.</p>
                 </div>
 
                 <div class="pure-controls">
 
-                    <button type="submit" class="pure-button pure-button-primary pure-input-1-4" ng-click="newMessage()">Send</button>
+                    <button type="submit" class="pure-button pure-button-primary pure-input-1-4" ng-click="newMessage()" ng-disabled="postForm.$invalid">Send</button>
                 </div>
             </fieldset>
         </form>

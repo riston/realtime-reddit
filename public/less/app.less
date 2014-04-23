@@ -1,5 +1,7 @@
 @nice-blue: #5B83AD;
 @light-blue: @nice-blue + #111;
+@green: green;
+@red: red;
 
 * {
     -webkit-box-sizing: border-box;
@@ -17,6 +19,19 @@ h2, h3 {
 p {
     line-height: 1.6em;
 }
+
+/*
+ * Angular form validation styles
+ */
+
+.ng-valid       {
+    border-color: @green !important;
+}
+.ng-invalid     {
+    border-color: @red !important;
+}
+.ng-pristine    {  }
+.ng-dirty       {  }
 
 
 /*

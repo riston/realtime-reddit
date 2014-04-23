@@ -1,6 +1,8 @@
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 h2,h3{font-size:1.3em;letter-spacing:.1em;text-transform:uppercase;font-weight:900}
 p{line-height:1.6em}
+.ng-valid{border-color:#008000 !important}
+.ng-invalid{border-color:#f00 !important}
 .l-content{margin:0 auto}
 .l-box{padding:.5em 2em}
 .l-center{max-width:980px;margin:0 auto}

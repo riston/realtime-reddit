@@ -1,34 +1,12 @@
 'use strict';
 
-myApp.controller('MyCtrl1', [ '$scope', '$rootScope', 'PrimusService',
-    function ($scope, $rootScope, PrimusService) {
+myApp.controller('MyCtrl1', [ '$scope', '$rootScope', 'PrimusService', 'posts',
+    function ($scope, $rootScope, PrimusService, posts) {
 
-    $scope.messages = [
-        {
-            url: 'http://www.neti.ee',
-            title: 'Homepage for neti',
-            tags: [ 'aw', 'node', 'sak' ],
-            created: new Date(),
-            up_votes: 12,
-            down_votes: 42
-        },
-        {
-            url: 'http://www.neti.ee',
-            title: 'Homepage for neti',
-            tags: [ 'aw', 'node', 'sak' ],
-            created: new Date(),
-            up_votes: 12,
-            down_votes: 42
-        },
-        {
-            title: 'Homepage for neti',
-            url: 'http://www.neti.ee',
-            created: new Date(),
-            up_votes: 12,
-            down_votes: 42
-        }
-    ];
+    console.log(posts);
+    $scope.messages = posts.data;
 
+    // Received message from server
     PrimusService.on('data', function (spark) {
 
         if (spark.type && spark.type === 'new-message') {

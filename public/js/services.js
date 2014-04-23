@@ -23,3 +23,13 @@ myApp.service('PrimusService', [ '$rootScope', function ($rootScope) {
         }
     };
 }]);
+
+myApp.factory('PostsService', [ '$http', function ($http) {
+
+    return {
+
+        getPosts: function () {
+            return $http({ method: 'GET', url: '/api/posts' });
+        }
+    };
+}]);

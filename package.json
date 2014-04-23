@@ -8,11 +8,17 @@
   "dependencies": {
     "ws": "~0.4.31",
     "primus": "~2.1.2",
-    "express": "~3.5.1",
+    "express": "~4.0.0",
     "primus-redis-rooms": "~0.3.1",
     "config": "~0.4.35",
     "yaml": "~0.2.3",
     "primus-multiplex": "~3.0.1",
-    "ejs": "~1.0.0"
+    "ejs": "~1.0.0",
+    "mongojs": "~0.12.1",
+    "compress": "~0.1.9",
+    "compression": "~1.0.1",
+    "morgan": "~1.0.0",
+    "amqp": "~0.2.0",
+    "bunyan": "~0.22.3"
   }
 }

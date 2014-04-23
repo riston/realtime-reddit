@@ -1,5 +1,18 @@
 server:
+
+    mongodb:
+        uri: 'localhost/url-aggregator'
+
     redis:
         host: 'localhost'
         port: 6379
         channel: 'primus'
+
+    rabbitmq:
+        url: 'amqp://JyMNhuGt:S_TzdAS6hA3vKd7LjKATFrQ_XP6HDZ6n@running-ash-13.bigwig.lshift.net:10178/EcAATeFWyFEz'
+
+        queue:
+            name: 'task_queue'
+            options:
+                autoDelete: false
+                durable: true
